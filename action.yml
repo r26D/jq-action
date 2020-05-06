@@ -1,0 +1,13 @@
+name: 'JQ Action'
+description: 'This action makes it easy to run jq as an action'
+inputs:
+  cmd:
+    description: 'The command that should be run'
+    required: true
+runs:
+  using: 'docker'
+  #image: 'Dockerfile'
+  image: "docker://delmendo/yq-action:latest"
+  args:
+    - ${{ inputs.cmd }}
+    - ${{ inputs.working_directory }}
