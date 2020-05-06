@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-jq $CMD
+$INPUT_CMD
